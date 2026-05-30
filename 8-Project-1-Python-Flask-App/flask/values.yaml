@@ -1,0 +1,14 @@
+deployment:
+  app: pipeline
+  image:
+    repository: khatanve/hellotanveer
+    tag: 25
+
+service:
+  app: pipeline
+  containerPort: 5000
+  type: NodePort
+
+ingress:
+  containerPort: 5000
+  servicename: pipeline
